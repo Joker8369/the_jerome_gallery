@@ -1,0 +1,10 @@
+<h1>Tables#index</h1>
+<p>Find me in app/views/tables/index.html.erb</p>
+
+
+
+ <% @tables.each do |table| %>
+      <h2>Name : <%= table.name %></h2> <br>
+      <p>Description :<%= table.description %><br>
+      <p>Author :<%= table.author %></p> <br>
+      <% end %>
