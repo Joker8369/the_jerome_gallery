@@ -1,0 +1,22 @@
+.navbar{
+  display: flex;
+  justify-content:space-between;
+  // background: white;
+  align-items: center;
+}
+
+.navbar-collapse {
+  float: right;
+  text-align: end;
+  flex-grow: 0;
+}
+.navbar img {
+  width: 40px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+
+}

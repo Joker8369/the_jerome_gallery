@@ -23,3 +23,9 @@ Table.create!(
 )
 
 puts 'Tables create'
+
+admin = User.create!(
+  email: 'admin@gmail.com',
+  password: 'tototo',
+  password_confirmation: 'tototo'
+)
