@@ -1,8 +1,9 @@
 .navbar{
+  background: #001524;
   display: flex;
   justify-content:space-between;
-  // background: white;
   align-items: center;
+  color: aliceblue;
 }
 
 .navbar-collapse {
@@ -19,4 +20,8 @@ ul {
   list-style: none;
   justify-content: space-between;
 
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: aliceblue;
 }
