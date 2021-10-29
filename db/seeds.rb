@@ -1,6 +1,7 @@
 # Creation Database
 
 Table.destroy_all
+User.destroy_all
 puts 'No Table Existing !'
 puts 'no users'
 
@@ -10,6 +11,7 @@ admin = User.create!(
   address: 'Orliénas',
   phone: '0606060060',
   email: 'admin@gmail.com',
+  story: "...",
   password: 'tototo',
   password_confirmation: 'tototo'
 )

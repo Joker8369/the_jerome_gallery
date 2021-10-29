@@ -1,7 +1,7 @@
 
   <% @tables.each do |table| %>
 <div class="card-trip">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+  <%= cl_image_tag table.photo.key, height: 300, width: 400, crop: :fill %>
   <div class="card-trip-infos">
     <div>
       <h2><%= table.name %></h2>
@@ -11,5 +11,19 @@
     <h2 class="card-trip-pricing">£99.99</h2>
     <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
   </div>
+      <div class= "action">
+       <% if (user_signed_in? && @user.id == table.user_id) %>
+        <div>
+          <%= link_to 'See More', table_path(table) %>
+        </div>
+        <div>
+          <%= link_to 'Update', edit_table_path(table), method: :get %>
+        </div>
+        <div>
+          <%= link_to 'Delete', table_path(table), method: :delete,
+          data: { confirm: "Are you sure?" } %>
+        </div>
+      <% end %>
+      </div>
 </div>
   <% end %>

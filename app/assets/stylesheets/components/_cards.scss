@@ -1,7 +1,7 @@
 .card{
+  margin: 0 1rem 0 1rem;
   display: grid;
-  height: 30vh;
-  background-color: #FFECD1;
+  background-color: #fdf6ed;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   border: none;
@@ -44,4 +44,9 @@
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
+.action {
+  display: flex;
+  justify-content: space-around;
 }
