@@ -20,6 +20,7 @@ Table.create!(
   name: '1',
   description: 'lorem Ipsum',
   author: "Jerome CRANE",
+  price: "33"
   user_id: "#{admin.id}"
 )
 
@@ -27,12 +28,14 @@ Table.create!(
   name: '2',
   description: 'lorem Ipsum',
   author: "Jerome CRANE",
+  price: "45"
   user_id: "#{admin.id}"
 )
 Table.create!(
   name: '3',
   description: 'lorem Ipsum',
   author: "Jerome CRANE",
+  price: "48"
   user_id: "#{admin.id}"
 
 )

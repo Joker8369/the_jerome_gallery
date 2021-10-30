@@ -8,8 +8,8 @@
       <p><%= table.description %></p>
       <p><%= table.author %></p>
     </div>
-    <h2 class="card-trip-pricing">£99.99</h2>
-    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    <h2 class="card-trip-pricing"><%= table.price%>€</h2>
+    <%= cl_image_tag User.find(table.user_id).photo.key, height: 40, width: 40, crop: :fill, class:"card-trip-user avatar-bordered" %>
   </div>
       <div class= "action">
        <% if (user_signed_in? && @user.id == table.user_id) %>
