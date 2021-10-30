@@ -1,7 +1,7 @@
 
   <% @tables.each do |table| %>
 <div class="card-trip">
-  <%= cl_image_tag table.photo.key, height: 300, width: 400, crop: :fill %>
+  <%= cl_image_tag table.photo.key, height: 300, width: 400, crop: :thumb, gravity: :face%>
   <div class="card-trip-infos">
     <div>
       <h2><%= table.name %></h2>
@@ -9,7 +9,7 @@
       <p><%= table.author %></p>
     </div>
     <h2 class="card-trip-pricing"><%= table.price%>€</h2>
-    <%= cl_image_tag User.find(table.user_id).photo.key, height: 40, width: 40, crop: :fill, class:"card-trip-user avatar-bordered" %>
+    <%= cl_image_tag User.find(table.user_id).photo.key, height: 40, width: 40, crop: :thumb, gravity: :face, class:"card-trip-user avatar-bordered" %>
   </div>
       <div class= "action">
        <% if (user_signed_in? && @user.id == table.user_id) %>
