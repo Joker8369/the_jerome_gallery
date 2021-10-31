@@ -1,7 +1,7 @@
 
   <% @tables.each do |table| %>
 <div class="card-trip">
-  <%= cl_image_tag table.photo.key, height: 300, width: 400, crop: :thumb, gravity: :face%>
+  <%= link_to (cl_image_tag table.photo.key, height: 300, crop: :thumb, gravity: :face, class:"illustration"), table_path(table)%>
   <div class="card-trip-infos">
     <div>
       <h2><%= table.name %></h2>
@@ -13,9 +13,6 @@
   </div>
       <div class= "action">
        <% if (user_signed_in? && @user.id == table.user_id) %>
-        <div>
-          <%= link_to 'See More', table_path(table) %>
-        </div>
         <div>
           <%= link_to 'Update', edit_table_path(table), method: :get %>
         </div>

@@ -38,7 +38,7 @@ class TablesController < ApplicationController
   private
 
   def table_params
-    params.require(:table).permit(:name, :description, :author, :photo)
+    params.require(:table).permit(:name, :description, :author, :photo, :price)
   end
 
   def find

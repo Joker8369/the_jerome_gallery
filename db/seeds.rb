@@ -12,6 +12,7 @@ admin = User.create!(
   phone: '0606060060',
   email: 'admin@gmail.com',
   story: "...",
+  admin: true,
   password: 'tototo',
   password_confirmation: 'tototo'
 )
