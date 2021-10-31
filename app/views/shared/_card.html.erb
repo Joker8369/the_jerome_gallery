@@ -1,7 +1,7 @@
 
   <% @tables.each do |table| %>
 <div class="card-trip">
-  <%= link_to (cl_image_tag table.photo.key, height: 300, crop: :thumb, gravity: :face, class:"illustration"), table_path(table)%>
+  <%= link_to (cl_image_tag table.photo.key, height: 400, class:"illustration"), table_path(table)%>
   <div class="card-trip-infos">
     <div>
       <h2><%= table.name %></h2>
