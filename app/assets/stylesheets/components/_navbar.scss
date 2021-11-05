@@ -1,5 +1,4 @@
 .navbar{
-  height: 8vh;
   background: #001524;
   display: flex;
   justify-content:space-between;
@@ -11,9 +10,6 @@
   float: right;
   text-align: end;
   flex-grow: 0;
-}
-.navbar img {
-  width: 40px;
 }
 
 ul {
@@ -28,4 +24,25 @@ margin-right: 5vh;
 }
 .navbar-light .navbar-nav .nav-link {
     color: aliceblue;
+}
+
+@media(max-width: 992px) {
+
+.collapse:not(.show) {
+    display: contents;
+}
+  .navbar h2 {
+    margin: 0;
+    font-size: 1rem;
+  }
+}
+
+@media(max-width: 320px) {
+    .navbar-collapse {
+  font-size: 1rem;
+}
+   .navbar h2 {
+     margin: 0;
+    font-size: 1rem ;
+  }
 }
