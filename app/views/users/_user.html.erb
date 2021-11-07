@@ -1,3 +1,4 @@
+<div class='form'>
 <%= simple_form_for(@user) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -8,12 +9,13 @@
     <%= f.input :address %>
     <%= f.input :phone%>
     <%= f.input :email%>
-    <%= f.text_area :story %>
+    <%= f.input :story, as: :text %>
     <%= f.input :photo, as: :file %>
-  </div>
+  </div><br><br>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, "Update"%>
   </div>
 
 <% end %>
+</div>

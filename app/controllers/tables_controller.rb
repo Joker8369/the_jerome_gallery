@@ -1,4 +1,5 @@
 class TablesController < ApplicationController
+   skip_before_action :authenticate_user!, only: %i[index show]
    before_action :find, only: %i[edit show update destroy]
   def index
     @admin = User.find_by(first_name: "CRANE")
@@ -11,9 +12,11 @@ class TablesController < ApplicationController
 
   def new
     @table = Table.new
+    authorize @table
   end
 
   def create
+    authorize @table
     @table = Table.create(table_params)
     @table.user = current_user
     if @table.save
@@ -43,5 +46,6 @@ class TablesController < ApplicationController
 
   def find
     @table = Table.find(params[:id])
+    authorize @table
   end
 end

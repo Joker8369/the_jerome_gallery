@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, :skip => [:registrations]
 root to: 'tables#index'
 resources :tables
 resources :users, except: %i[new create destroy]

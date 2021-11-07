@@ -14,7 +14,7 @@
       <div class= "action">
        <% if (user_signed_in? && @user.id == table.user_id) %>
         <div>
-          <%= link_to 'Update', edit_table_path(table), method: :get %>
+          <% if policy(Table).edit? %><%= link_to 'Update', edit_table_path(table), method: :get %><% end %>
         </div>
         <div>
           <%= link_to 'Delete', table_path(table), method: :delete,
