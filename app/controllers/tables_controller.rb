@@ -16,9 +16,9 @@ class TablesController < ApplicationController
   end
 
   def create
-    authorize @table
     @table = Table.create(table_params)
     @table.user = current_user
+    authorize @table
     if @table.save
       redirect_to root_path
     else
