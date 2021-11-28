@@ -20,7 +20,7 @@ admin = User.create!(
 Table.create!(
   name: '1',
   description: 'lorem Ipsum',
-  author: "Jerome CRANE",
+  author: "#{admin.last_name} #{admin.first_name}",
   price: "33",
   user_id: "#{admin.id}"
 )
@@ -28,14 +28,14 @@ Table.create!(
 Table.create!(
   name: '2',
   description: 'lorem Ipsum',
-  author: "Jerome CRANE",
+  author: "#{admin.last_name} #{admin.first_name}",
   price: "45",
   user_id: "#{admin.id}"
 )
 Table.create!(
   name: '3',
   description: 'lorem Ipsum',
-  author: "Jerome CRANE",
+  author: "#{admin.last_name} #{admin.first_name}",
   price: "48",
   user_id: "#{admin.id}"
 

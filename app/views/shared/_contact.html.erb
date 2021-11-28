@@ -1,1 +1,21 @@
-formulaire
+<div class='form_mail'>
+<%= form_with url: contacts_path(model: @contact, local: true) do |f| %>
+<div class ="corps">
+  <%= f.label :last_name, "Nom" %>
+  <%= f.text_field :last_name %><br>
+
+  <%= f.label :first_name, "Prenom" %>
+  <%= f.text_field :first_name %><br>
+
+  <%= f.label :phone, "Phone" %>
+  <%= f.text_field :phone %><br>
+
+  <%= f.label :email, "Email" %>
+  <%= f.text_field :email, autocomplete: "email"%><br>
+  <%= f.label :content, "Votre demande" %>
+  <%= f.text_area :content, size:"19%x3" %> <br>
+  </div>
+  <%= f.submit "Envoyer", :class => 'btnPopup', :id => 'btnPopup' %>
+
+<% end %>
+</div>

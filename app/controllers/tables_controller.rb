@@ -11,13 +11,14 @@ class TablesController < ApplicationController
   end
 
   def new
+    @users = User.all
     @table = Table.new
     authorize @table
   end
 
   def create
     @table = Table.create(table_params)
-    @table.user = current_user
+
     authorize @table
     if @table.save
       redirect_to root_path
@@ -41,7 +42,7 @@ class TablesController < ApplicationController
   private
 
   def table_params
-    params.require(:table).permit(:name, :description, :author, :photo, :price)
+    params.require(:table).permit(:name, :description, :author, :photo, :price, :user_id)
   end
 
   def find

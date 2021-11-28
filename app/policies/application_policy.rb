@@ -1,4 +1,4 @@
-# frozen_string_literal: true coucou
+# frozen_string_literal: true
 
 class ApplicationPolicy
   attr_reader :user, :record
@@ -17,7 +17,7 @@ class ApplicationPolicy
   end
 
  def create?
-    true if @user.id == user.id
+    true
   end
   def new?
     create?

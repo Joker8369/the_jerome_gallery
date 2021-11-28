@@ -56,11 +56,11 @@ ActiveRecord::Schema.define(version: 2021_11_07_190038) do
   create_table "tables", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.string "author"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
     t.string "price"
+    t.string "author"
     t.index ["user_id"], name: "index_tables_on_user_id"
   end
 

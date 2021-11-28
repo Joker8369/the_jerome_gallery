@@ -1,4 +1,80 @@
 .contact {
   height: 30vh;
   margin: 1% 1.5% 1% 1.5%;
+  display: flex;
+  justify-content: center;
+}
+
+.btnPopup {
+padding: 5px;
+cursor: pointer;
+background: linear-gradient(#fff, #15616d);
+opacity: 40%;
+color: #fff;
+border: 1px solid #eee;
+border-radius: 20px;
+box-shadow: 5px 5px 5px #eee;
+text-shadow:none;
+}
+
+.btnPopup:hover{
+background: linear-gradient(#fff, #15616d);
+opacity: 70%;
+color: #fff;
+border: 1px solid #eee;
+border-radius: 20px;
+box-shadow: 5px 5px 5px #eee;
+text-shadow:none;
+}
+
+.overlay {
+position: fixed;
+left: 0px;
+top:0px;
+background-color: rgba(0,0 ,0 , 0.5);
+width: 100%;
+height: 100%;
+z-index:1;
+display:none;
+}
+
+.popup{
+margin: 25% auto;
+width : 23%;
+background-color: rgb(243, 243, 243);
+padding: 1em;
+box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+border-radius: 5px;
+}
+
+
+.btnClose {
+float: right;
+font-size:16pt;
+cursor: pointer;
+color: rgb(26, 26, 26);
+}
+
+.form_mail {
+  width: 40%;
+  border-radius: 40%;
+  background: aliceblue;
+  display: flex;
+  justify-content: center;
+}
+.corps{
+  padding-top: 7%;
+  padding-right: 100px;
+}
+
+label {
+  width: 90px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 6px;
+}
+
+form {
+  text-align: center;
+
 }
