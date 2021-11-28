@@ -56,3 +56,10 @@
 .form-actions:hover::before {
 	left: 100%;
 }
+fieldset.form-group {
+ display: inline-grid;
+}
+
+.form-check-label {
+ display: contents;
+}

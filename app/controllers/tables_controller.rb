@@ -10,16 +10,19 @@ class TablesController < ApplicationController
   def edit
   end
 
+
+
   def new
-    @users = User.all
     @table = Table.new
     authorize @table
   end
 
   def create
     @table = Table.create(table_params)
-
+    full_name = User.find(@table.user_id).last_name + " " + User.find(@table.user_id).first_name
+    @users = User.all
     authorize @table
+    @table.author = full_name
     if @table.save
       redirect_to root_path
     else

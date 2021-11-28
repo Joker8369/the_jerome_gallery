@@ -8,9 +8,15 @@
   <div class="form-inputs">
     <%= f.input :name %>
     <%= f.input :description %>
-    <%= f.association :user, collection: @users, as: :radio_buttons%>
+      <%=f.label "Artiste"  %> <br>
+    <%= f.association :user, legend_tag: false,
+    :label_method => lambda { |user| "#{user.last_name} #{user.first_name}" },
+    as: :radio_buttons
+    %>
     <%= f.input :price %>
-    <%= f.input :photo, as: :file %>
+  <%=f.label "Photo"  %>
+    <%= f.input :photo, as: :file,
+    label: false %>
   </div>
   <br><br>
 
